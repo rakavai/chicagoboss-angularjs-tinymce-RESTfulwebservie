@@ -1,0 +1,18 @@
+<h5>Edit drug</h5>
+<form ng-submit="editDrugInfo()">
+    <fieldset class="form-group">
+        <label>Generic Name</label>
+        <input name="genericName" ng-model="form.genericName" placeholder="Generic name" type="text" class="form-control">
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Brand Name</label>
+        <input name="brandName" ng-model="form.brandName" placeholder="Brand Name" type="text" class="form-control">
+    </fieldset>
+    <hr>
+    <fieldset class="form-group">
+        <label>Description</label>
+        <textarea name="description" ui-tinymce ng-model="form.description" placeholder="Description" type="text" rows="10"></textarea>
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add Drug Info</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+
+
+</head>
+<body>
+{% verbatim %}
+<div class="container-fluid">
+    <div class="row">
+        <dv class="col-xs-12 bg-inverse" style="padding: 10px; margin-bottom: 10px">
+            <h3>My Paedi <a class="pull-xs-right btn btn-secondary" href="#/">Add a new drug info</a></h3>
+
+        </dv>
+    </div>
+</div>
+
+<div class="container" ng-app="myApp">
+
+    <div class="row">
+        <div class="col-xs-3" ng-controller="DrugListCtrl" style="max-height: 700px; overflow-y: scroll">
+            <h5>
+                Added drugs
+            </h5>
+            <hr>
+
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="drug in drugs">
+                    <a href="#view-drug/{{drug.id}}">
+                        {{drug.genericName}}
+                    </a>
+
+                    <a class="pull-xs-right" href="#/edit-drug/{{drug.id}}">
+                        <i class="material-icons">edit</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="col-xs-9" ng-view>
+
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- For AnugularJs -->
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+
+<!-- For AnugularJs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-resource.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.js"></script>
+<script src="/static/js/tinymce.js"></script>
+
+<script src="/static/js/app.js"></script>
+{% endverbatim %}
+</body>
+</html>

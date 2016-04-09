@@ -1,0 +1,24 @@
+{% verbatim %}
+<h5>
+    Info
+    <a class="pull-xs-right" href="#edit-drug/{{drug.id}}">Edit this drug info</a>
+</h5>
+<hr>
+<p>
+    <small>Generic Name:</small>
+    {{drug.genericName}}
+</p>
+<p>
+    <small>Brand Name:</small>
+</p>
+<ol class="">
+    <li class="" ng-repeat="brand in drug.brandName track by $index">
+        {{brand}}
+    </li>
+</ol>
+<p>
+    <small>Description:</small>
+</p>
+<div ng-bind-html="trustHtml(drug.description)">
+</div>
+{% endverbatim %}

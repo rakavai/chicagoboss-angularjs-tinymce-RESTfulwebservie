@@ -1,0 +1,7 @@
+.idea/
+Mnesia.paedi@DESKTOP-3CM0CHB/
+deps/
+ebin/
+erl_crash.dump
+log/
+paedi.iml
